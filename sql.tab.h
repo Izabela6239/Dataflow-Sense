@@ -35,8 +35,8 @@
    especially those whose name start with YY_ or yy_.  They are
    private implementation details that can be changed or removed.  */
 
-#ifndef YY_YY_Y_TAB_H_INCLUDED
-# define YY_YY_Y_TAB_H_INCLUDED
+#ifndef YY_YY_SQL_TAB_H_INCLUDED
+# define YY_YY_SQL_TAB_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -119,73 +119,6 @@ extern int yydebug;
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
-/* Token kinds.  */
-#define YYEMPTY -2
-#define YYEOF 0
-#define YYerror 256
-#define YYUNDEF 257
-#define SELECT 258
-#define DISTINCT 259
-#define FROM 260
-#define WHERE 261
-#define AND 262
-#define OR 263
-#define NOT 264
-#define JOIN 265
-#define INNER 266
-#define LEFT 267
-#define RIGHT 268
-#define FULL 269
-#define OUTER 270
-#define CROSS 271
-#define ON 272
-#define ORDER 273
-#define BY 274
-#define ASC 275
-#define DESC 276
-#define HAVING 277
-#define LIKE 278
-#define IN 279
-#define BETWEEN 280
-#define IS 281
-#define NULL_T 282
-#define LIMIT 283
-#define OFFSET 284
-#define GROUP 285
-#define AS 286
-#define SUM 287
-#define AVG 288
-#define COUNT 289
-#define MIN 290
-#define MAX 291
-#define INSERT 292
-#define INTO 293
-#define VALUES 294
-#define UPDATE 295
-#define SET 296
-#define DELETE 297
-#define CREATE 298
-#define TABLE 299
-#define DROP 300
-#define ALTER 301
-#define ADD 302
-#define COLUMN 303
-#define PRIMARY 304
-#define KEY 305
-#define FOREIGN 306
-#define REFERENCES 307
-#define DEFAULT 308
-#define CHECK 309
-#define UNIQUE 310
-#define EQ 311
-#define GT 312
-#define LT 313
-#define GE 314
-#define LE 315
-#define NE 316
-#define WORD 317
-#define NUMBER 318
-#define STRING 319
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -195,7 +128,7 @@ union YYSTYPE
 
     char* str;
 
-#line 199 "y.tab.h"
+#line 132 "sql.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -210,4 +143,4 @@ extern YYSTYPE yylval;
 int yyparse (void);
 
 
-#endif /* !YY_YY_Y_TAB_H_INCLUDED  */
+#endif /* !YY_YY_SQL_TAB_H_INCLUDED  */

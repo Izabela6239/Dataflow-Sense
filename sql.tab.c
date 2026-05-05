@@ -105,7 +105,7 @@ char* append_text(char* left, const char* separator, char* right) {
     return textf("%s%s%s", left, separator, right);
 }
 
-#line 109 "y.tab.c"
+#line 109 "sql.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -128,184 +128,7 @@ char* append_text(char* left, const char* separator, char* right) {
 #  endif
 # endif
 
-/* Use api.header.include to #include this header
-   instead of duplicating it here.  */
-#ifndef YY_YY_Y_TAB_H_INCLUDED
-# define YY_YY_Y_TAB_H_INCLUDED
-/* Debug traces.  */
-#ifndef YYDEBUG
-# define YYDEBUG 0
-#endif
-#if YYDEBUG
-extern int yydebug;
-#endif
-
-/* Token kinds.  */
-#ifndef YYTOKENTYPE
-# define YYTOKENTYPE
-  enum yytokentype
-  {
-    YYEMPTY = -2,
-    YYEOF = 0,                     /* "end of file"  */
-    YYerror = 256,                 /* error  */
-    YYUNDEF = 257,                 /* "invalid token"  */
-    SELECT = 258,                  /* SELECT  */
-    DISTINCT = 259,                /* DISTINCT  */
-    FROM = 260,                    /* FROM  */
-    WHERE = 261,                   /* WHERE  */
-    AND = 262,                     /* AND  */
-    OR = 263,                      /* OR  */
-    NOT = 264,                     /* NOT  */
-    JOIN = 265,                    /* JOIN  */
-    INNER = 266,                   /* INNER  */
-    LEFT = 267,                    /* LEFT  */
-    RIGHT = 268,                   /* RIGHT  */
-    FULL = 269,                    /* FULL  */
-    OUTER = 270,                   /* OUTER  */
-    CROSS = 271,                   /* CROSS  */
-    ON = 272,                      /* ON  */
-    ORDER = 273,                   /* ORDER  */
-    BY = 274,                      /* BY  */
-    ASC = 275,                     /* ASC  */
-    DESC = 276,                    /* DESC  */
-    HAVING = 277,                  /* HAVING  */
-    LIKE = 278,                    /* LIKE  */
-    IN = 279,                      /* IN  */
-    BETWEEN = 280,                 /* BETWEEN  */
-    IS = 281,                      /* IS  */
-    NULL_T = 282,                  /* NULL_T  */
-    LIMIT = 283,                   /* LIMIT  */
-    OFFSET = 284,                  /* OFFSET  */
-    GROUP = 285,                   /* GROUP  */
-    AS = 286,                      /* AS  */
-    SUM = 287,                     /* SUM  */
-    AVG = 288,                     /* AVG  */
-    COUNT = 289,                   /* COUNT  */
-    MIN = 290,                     /* MIN  */
-    MAX = 291,                     /* MAX  */
-    INSERT = 292,                  /* INSERT  */
-    INTO = 293,                    /* INTO  */
-    VALUES = 294,                  /* VALUES  */
-    UPDATE = 295,                  /* UPDATE  */
-    SET = 296,                     /* SET  */
-    DELETE = 297,                  /* DELETE  */
-    CREATE = 298,                  /* CREATE  */
-    TABLE = 299,                   /* TABLE  */
-    DROP = 300,                    /* DROP  */
-    ALTER = 301,                   /* ALTER  */
-    ADD = 302,                     /* ADD  */
-    COLUMN = 303,                  /* COLUMN  */
-    PRIMARY = 304,                 /* PRIMARY  */
-    KEY = 305,                     /* KEY  */
-    FOREIGN = 306,                 /* FOREIGN  */
-    REFERENCES = 307,              /* REFERENCES  */
-    DEFAULT = 308,                 /* DEFAULT  */
-    CHECK = 309,                   /* CHECK  */
-    UNIQUE = 310,                  /* UNIQUE  */
-    EQ = 311,                      /* EQ  */
-    GT = 312,                      /* GT  */
-    LT = 313,                      /* LT  */
-    GE = 314,                      /* GE  */
-    LE = 315,                      /* LE  */
-    NE = 316,                      /* NE  */
-    WORD = 317,                    /* WORD  */
-    NUMBER = 318,                  /* NUMBER  */
-    STRING = 319                   /* STRING  */
-  };
-  typedef enum yytokentype yytoken_kind_t;
-#endif
-/* Token kinds.  */
-#define YYEMPTY -2
-#define YYEOF 0
-#define YYerror 256
-#define YYUNDEF 257
-#define SELECT 258
-#define DISTINCT 259
-#define FROM 260
-#define WHERE 261
-#define AND 262
-#define OR 263
-#define NOT 264
-#define JOIN 265
-#define INNER 266
-#define LEFT 267
-#define RIGHT 268
-#define FULL 269
-#define OUTER 270
-#define CROSS 271
-#define ON 272
-#define ORDER 273
-#define BY 274
-#define ASC 275
-#define DESC 276
-#define HAVING 277
-#define LIKE 278
-#define IN 279
-#define BETWEEN 280
-#define IS 281
-#define NULL_T 282
-#define LIMIT 283
-#define OFFSET 284
-#define GROUP 285
-#define AS 286
-#define SUM 287
-#define AVG 288
-#define COUNT 289
-#define MIN 290
-#define MAX 291
-#define INSERT 292
-#define INTO 293
-#define VALUES 294
-#define UPDATE 295
-#define SET 296
-#define DELETE 297
-#define CREATE 298
-#define TABLE 299
-#define DROP 300
-#define ALTER 301
-#define ADD 302
-#define COLUMN 303
-#define PRIMARY 304
-#define KEY 305
-#define FOREIGN 306
-#define REFERENCES 307
-#define DEFAULT 308
-#define CHECK 309
-#define UNIQUE 310
-#define EQ 311
-#define GT 312
-#define LT 313
-#define GE 314
-#define LE 315
-#define NE 316
-#define WORD 317
-#define NUMBER 318
-#define STRING 319
-
-/* Value type.  */
-#if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-union YYSTYPE
-{
-#line 39 "sql.y"
-
-    char* str;
-
-#line 294 "y.tab.c"
-
-};
-typedef union YYSTYPE YYSTYPE;
-# define YYSTYPE_IS_TRIVIAL 1
-# define YYSTYPE_IS_DECLARED 1
-#endif
-
-
-extern YYSTYPE yylval;
-
-
-int yyparse (void);
-
-
-#endif /* !YY_YY_Y_TAB_H_INCLUDED  */
+#include "sql.tab.h"
 /* Symbol kind.  */
 enum yysymbol_kind_t
 {
@@ -1580,19 +1403,19 @@ yyreduce:
   case 5: /* linie: statement '\n'  */
 #line 73 "sql.y"
                            { printf("\nTRADUCERE ANALITICA: %s\n\n", (yyvsp[-1].str)); }
-#line 1584 "y.tab.c"
+#line 1407 "sql.tab.c"
     break;
 
   case 6: /* linie: statement ';' '\n'  */
 #line 74 "sql.y"
                            { printf("\nTRADUCERE ANALITICA: %s\n\n", (yyvsp[-2].str)); }
-#line 1590 "y.tab.c"
+#line 1413 "sql.tab.c"
     break;
 
   case 7: /* linie: error '\n'  */
 #line 75 "sql.y"
                            { yyerrok; printf("Eroare de structura SQL detectata.\n"); }
-#line 1596 "y.tab.c"
+#line 1419 "sql.tab.c"
     break;
 
   case 15: /* select_stmt: SELECT select_prefix select_list FROM table_ref join_list optional_where group_by_clause having_clause order_clause limit_clause  */
@@ -1601,61 +1424,61 @@ yyreduce:
           (yyval.str) = textf("Selecteaza %s%s din %s%s%s%s%s%s%s",
                      (yyvsp[-9].str), (yyvsp[-8].str), (yyvsp[-6].str), (yyvsp[-5].str), (yyvsp[-4].str), (yyvsp[-3].str), (yyvsp[-2].str), (yyvsp[-1].str), (yyvsp[0].str));
       }
-#line 1605 "y.tab.c"
+#line 1428 "sql.tab.c"
     break;
 
   case 16: /* select_prefix: %empty  */
 #line 96 "sql.y"
                 { (yyval.str) = strdup(""); }
-#line 1611 "y.tab.c"
+#line 1434 "sql.tab.c"
     break;
 
   case 17: /* select_prefix: DISTINCT  */
 #line 97 "sql.y"
                 { (yyval.str) = strdup("valorile distincte pentru "); }
-#line 1617 "y.tab.c"
+#line 1440 "sql.tab.c"
     break;
 
   case 18: /* select_list: select_item  */
 #line 101 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 1623 "y.tab.c"
+#line 1446 "sql.tab.c"
     break;
 
   case 19: /* select_list: select_list ',' select_item  */
 #line 102 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-2].str), ", ", (yyvsp[0].str)); }
-#line 1629 "y.tab.c"
+#line 1452 "sql.tab.c"
     break;
 
   case 20: /* select_item: '*'  */
 #line 106 "sql.y"
                                           { (yyval.str) = strdup("toate coloanele"); }
-#line 1635 "y.tab.c"
+#line 1458 "sql.tab.c"
     break;
 
   case 21: /* select_item: expression opt_alias  */
 #line 107 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-1].str), " ", (yyvsp[0].str)); }
-#line 1641 "y.tab.c"
+#line 1464 "sql.tab.c"
     break;
 
   case 22: /* opt_alias: %empty  */
 #line 111 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1647 "y.tab.c"
+#line 1470 "sql.tab.c"
     break;
 
   case 23: /* opt_alias: AS WORD  */
 #line 112 "sql.y"
                                           { (yyval.str) = textf("cu aliasul %s", (yyvsp[0].str)); }
-#line 1653 "y.tab.c"
+#line 1476 "sql.tab.c"
     break;
 
   case 24: /* opt_alias: WORD  */
 #line 113 "sql.y"
                                           { (yyval.str) = textf("cu aliasul %s", (yyvsp[0].str)); }
-#line 1659 "y.tab.c"
+#line 1482 "sql.tab.c"
     break;
 
   case 25: /* insert_stmt: INSERT INTO identifier VALUES value_tuple  */
@@ -1663,7 +1486,7 @@ yyreduce:
                                                 {
           (yyval.str) = textf("Insereaza in tabelul %s valorile %s", (yyvsp[-2].str), (yyvsp[0].str));
       }
-#line 1667 "y.tab.c"
+#line 1490 "sql.tab.c"
     break;
 
   case 26: /* insert_stmt: INSERT INTO identifier '(' column_list ')' VALUES value_tuple_list  */
@@ -1671,7 +1494,7 @@ yyreduce:
                                                                          {
           (yyval.str) = textf("Insereaza in tabelul %s, in coloanele %s, valorile %s", (yyvsp[-5].str), (yyvsp[-3].str), (yyvsp[0].str));
       }
-#line 1675 "y.tab.c"
+#line 1498 "sql.tab.c"
     break;
 
   case 27: /* update_stmt: UPDATE identifier SET assignment_list optional_where  */
@@ -1679,7 +1502,7 @@ yyreduce:
                                                            {
           (yyval.str) = textf("Actualizeaza tabelul %s setand %s%s", (yyvsp[-3].str), (yyvsp[-1].str), (yyvsp[0].str));
       }
-#line 1683 "y.tab.c"
+#line 1506 "sql.tab.c"
     break;
 
   case 28: /* delete_stmt: DELETE FROM identifier optional_where  */
@@ -1687,7 +1510,7 @@ yyreduce:
                                             {
           (yyval.str) = textf("Sterge randuri din tabelul %s%s", (yyvsp[-1].str), (yyvsp[0].str));
       }
-#line 1691 "y.tab.c"
+#line 1514 "sql.tab.c"
     break;
 
   case 29: /* create_stmt: CREATE TABLE identifier '(' column_def_list ')'  */
@@ -1695,7 +1518,7 @@ yyreduce:
                                                       {
           (yyval.str) = textf("Creeaza tabelul %s cu definitiile: %s", (yyvsp[-3].str), (yyvsp[-1].str));
       }
-#line 1699 "y.tab.c"
+#line 1522 "sql.tab.c"
     break;
 
   case 30: /* drop_stmt: DROP TABLE identifier  */
@@ -1703,7 +1526,7 @@ yyreduce:
                             {
           (yyval.str) = textf("Sterge tabelul %s", (yyvsp[0].str));
       }
-#line 1707 "y.tab.c"
+#line 1530 "sql.tab.c"
     break;
 
   case 31: /* alter_stmt: ALTER TABLE identifier ADD opt_column column_def  */
@@ -1711,7 +1534,7 @@ yyreduce:
                                                        {
           (yyval.str) = textf("Modifica tabelul %s adaugand coloana %s", (yyvsp[-3].str), (yyvsp[0].str));
       }
-#line 1715 "y.tab.c"
+#line 1538 "sql.tab.c"
     break;
 
   case 32: /* alter_stmt: ALTER TABLE identifier DROP opt_column identifier  */
@@ -1719,37 +1542,37 @@ yyreduce:
                                                         {
           (yyval.str) = textf("Modifica tabelul %s stergand coloana %s", (yyvsp[-3].str), (yyvsp[0].str));
       }
-#line 1723 "y.tab.c"
+#line 1546 "sql.tab.c"
     break;
 
   case 33: /* opt_column: %empty  */
 #line 159 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1729 "y.tab.c"
+#line 1552 "sql.tab.c"
     break;
 
   case 34: /* opt_column: COLUMN  */
 #line 160 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1735 "y.tab.c"
+#line 1558 "sql.tab.c"
     break;
 
   case 35: /* table_ref: identifier opt_alias  */
 #line 164 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-1].str), " ", (yyvsp[0].str)); }
-#line 1741 "y.tab.c"
+#line 1564 "sql.tab.c"
     break;
 
   case 36: /* join_list: %empty  */
 #line 168 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1747 "y.tab.c"
+#line 1570 "sql.tab.c"
     break;
 
   case 37: /* join_list: join_list join_clause  */
 #line 169 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-1].str), "", (yyvsp[0].str)); }
-#line 1753 "y.tab.c"
+#line 1576 "sql.tab.c"
     break;
 
   case 38: /* join_clause: join_type JOIN table_ref ON condition  */
@@ -1757,7 +1580,7 @@ yyreduce:
                                             {
           (yyval.str) = textf(", combinat prin %s cu %s pe baza conditiei %s", (yyvsp[-4].str), (yyvsp[-2].str), (yyvsp[0].str));
       }
-#line 1761 "y.tab.c"
+#line 1584 "sql.tab.c"
     break;
 
   case 39: /* join_clause: CROSS JOIN table_ref  */
@@ -1765,169 +1588,169 @@ yyreduce:
                            {
           (yyval.str) = textf(", combinat cartezian cu %s", (yyvsp[0].str));
       }
-#line 1769 "y.tab.c"
+#line 1592 "sql.tab.c"
     break;
 
   case 40: /* join_type: %empty  */
 #line 182 "sql.y"
                                           { (yyval.str) = strdup("JOIN"); }
-#line 1775 "y.tab.c"
+#line 1598 "sql.tab.c"
     break;
 
   case 41: /* join_type: INNER  */
 #line 183 "sql.y"
                                           { (yyval.str) = strdup("INNER JOIN"); }
-#line 1781 "y.tab.c"
+#line 1604 "sql.tab.c"
     break;
 
   case 42: /* join_type: LEFT opt_outer  */
 #line 184 "sql.y"
                                           { (yyval.str) = strdup("LEFT JOIN"); }
-#line 1787 "y.tab.c"
+#line 1610 "sql.tab.c"
     break;
 
   case 43: /* join_type: RIGHT opt_outer  */
 #line 185 "sql.y"
                                           { (yyval.str) = strdup("RIGHT JOIN"); }
-#line 1793 "y.tab.c"
+#line 1616 "sql.tab.c"
     break;
 
   case 44: /* join_type: FULL opt_outer  */
 #line 186 "sql.y"
                                           { (yyval.str) = strdup("FULL JOIN"); }
-#line 1799 "y.tab.c"
+#line 1622 "sql.tab.c"
     break;
 
   case 45: /* opt_outer: %empty  */
 #line 190 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1805 "y.tab.c"
+#line 1628 "sql.tab.c"
     break;
 
   case 46: /* opt_outer: OUTER  */
 #line 191 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1811 "y.tab.c"
+#line 1634 "sql.tab.c"
     break;
 
   case 47: /* optional_where: %empty  */
 #line 195 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1817 "y.tab.c"
+#line 1640 "sql.tab.c"
     break;
 
   case 48: /* optional_where: WHERE condition  */
 #line 196 "sql.y"
                                           { (yyval.str) = textf(" unde %s", (yyvsp[0].str)); }
-#line 1823 "y.tab.c"
+#line 1646 "sql.tab.c"
     break;
 
   case 49: /* group_by_clause: %empty  */
 #line 200 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1829 "y.tab.c"
+#line 1652 "sql.tab.c"
     break;
 
   case 50: /* group_by_clause: GROUP BY column_list  */
 #line 201 "sql.y"
                                           { (yyval.str) = textf(", grupat dupa %s", (yyvsp[0].str)); }
-#line 1835 "y.tab.c"
+#line 1658 "sql.tab.c"
     break;
 
   case 51: /* having_clause: %empty  */
 #line 205 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1841 "y.tab.c"
+#line 1664 "sql.tab.c"
     break;
 
   case 52: /* having_clause: HAVING condition  */
 #line 206 "sql.y"
                                           { (yyval.str) = textf(", pastrand grupurile unde %s", (yyvsp[0].str)); }
-#line 1847 "y.tab.c"
+#line 1670 "sql.tab.c"
     break;
 
   case 53: /* order_clause: %empty  */
 #line 210 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1853 "y.tab.c"
+#line 1676 "sql.tab.c"
     break;
 
   case 54: /* order_clause: ORDER BY order_list  */
 #line 211 "sql.y"
                                           { (yyval.str) = textf(", sortat dupa %s", (yyvsp[0].str)); }
-#line 1859 "y.tab.c"
+#line 1682 "sql.tab.c"
     break;
 
   case 55: /* order_list: order_item  */
 #line 215 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 1865 "y.tab.c"
+#line 1688 "sql.tab.c"
     break;
 
   case 56: /* order_list: order_list ',' order_item  */
 #line 216 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-2].str), ", ", (yyvsp[0].str)); }
-#line 1871 "y.tab.c"
+#line 1694 "sql.tab.c"
     break;
 
   case 57: /* order_item: expression direction  */
 #line 220 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-1].str), " ", (yyvsp[0].str)); }
-#line 1877 "y.tab.c"
+#line 1700 "sql.tab.c"
     break;
 
   case 58: /* direction: %empty  */
 #line 224 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1883 "y.tab.c"
+#line 1706 "sql.tab.c"
     break;
 
   case 59: /* direction: ASC  */
 #line 225 "sql.y"
                                           { (yyval.str) = strdup("crescator"); }
-#line 1889 "y.tab.c"
+#line 1712 "sql.tab.c"
     break;
 
   case 60: /* direction: DESC  */
 #line 226 "sql.y"
                                           { (yyval.str) = strdup("descrescator"); }
-#line 1895 "y.tab.c"
+#line 1718 "sql.tab.c"
     break;
 
   case 61: /* limit_clause: %empty  */
 #line 230 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1901 "y.tab.c"
+#line 1724 "sql.tab.c"
     break;
 
   case 62: /* limit_clause: LIMIT NUMBER  */
 #line 231 "sql.y"
                                           { (yyval.str) = textf(", limitat la %s randuri", (yyvsp[0].str)); }
-#line 1907 "y.tab.c"
+#line 1730 "sql.tab.c"
     break;
 
   case 63: /* limit_clause: LIMIT NUMBER OFFSET NUMBER  */
 #line 232 "sql.y"
                                           { (yyval.str) = textf(", limitat la %s randuri cu offset %s", (yyvsp[-2].str), (yyvsp[0].str)); }
-#line 1913 "y.tab.c"
+#line 1736 "sql.tab.c"
     break;
 
   case 64: /* condition: expression comparator expression  */
 #line 236 "sql.y"
                                           { (yyval.str) = textf("%s %s %s", (yyvsp[-2].str), (yyvsp[-1].str), (yyvsp[0].str)); }
-#line 1919 "y.tab.c"
+#line 1742 "sql.tab.c"
     break;
 
   case 65: /* condition: expression LIKE literal  */
 #line 237 "sql.y"
                                           { (yyval.str) = textf("%s seamana cu %s", (yyvsp[-2].str), (yyvsp[0].str)); }
-#line 1925 "y.tab.c"
+#line 1748 "sql.tab.c"
     break;
 
   case 66: /* condition: expression IN '(' literal_list ')'  */
 #line 238 "sql.y"
                                           { (yyval.str) = textf("%s este in lista (%s)", (yyvsp[-4].str), (yyvsp[-1].str)); }
-#line 1931 "y.tab.c"
+#line 1754 "sql.tab.c"
     break;
 
   case 67: /* condition: expression BETWEEN expression AND expression  */
@@ -1935,223 +1758,223 @@ yyreduce:
                                                    {
           (yyval.str) = textf("%s este intre %s si %s", (yyvsp[-4].str), (yyvsp[-2].str), (yyvsp[0].str));
       }
-#line 1939 "y.tab.c"
+#line 1762 "sql.tab.c"
     break;
 
   case 68: /* condition: expression IS optional_not NULL_T  */
 #line 242 "sql.y"
                                           { (yyval.str) = textf("%s este %sNULL", (yyvsp[-3].str), (yyvsp[-1].str)); }
-#line 1945 "y.tab.c"
+#line 1768 "sql.tab.c"
     break;
 
   case 69: /* condition: NOT condition  */
 #line 243 "sql.y"
                                           { (yyval.str) = textf("NU (%s)", (yyvsp[0].str)); }
-#line 1951 "y.tab.c"
+#line 1774 "sql.tab.c"
     break;
 
   case 70: /* condition: condition AND condition  */
 #line 244 "sql.y"
                                           { (yyval.str) = textf("%s SI %s", (yyvsp[-2].str), (yyvsp[0].str)); }
-#line 1957 "y.tab.c"
+#line 1780 "sql.tab.c"
     break;
 
   case 71: /* condition: condition OR condition  */
 #line 245 "sql.y"
                                           { (yyval.str) = textf("%s SAU %s", (yyvsp[-2].str), (yyvsp[0].str)); }
-#line 1963 "y.tab.c"
+#line 1786 "sql.tab.c"
     break;
 
   case 72: /* condition: '(' condition ')'  */
 #line 246 "sql.y"
                                           { (yyval.str) = textf("(%s)", (yyvsp[-1].str)); }
-#line 1969 "y.tab.c"
+#line 1792 "sql.tab.c"
     break;
 
   case 73: /* optional_not: %empty  */
 #line 250 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 1975 "y.tab.c"
+#line 1798 "sql.tab.c"
     break;
 
   case 74: /* optional_not: NOT  */
 #line 251 "sql.y"
                                           { (yyval.str) = strdup("NOT "); }
-#line 1981 "y.tab.c"
+#line 1804 "sql.tab.c"
     break;
 
   case 75: /* comparator: EQ  */
 #line 255 "sql.y"
                                           { (yyval.str) = strdup("egal cu"); }
-#line 1987 "y.tab.c"
+#line 1810 "sql.tab.c"
     break;
 
   case 76: /* comparator: GT  */
 #line 256 "sql.y"
                                           { (yyval.str) = strdup("mai mare decat"); }
-#line 1993 "y.tab.c"
+#line 1816 "sql.tab.c"
     break;
 
   case 77: /* comparator: LT  */
 #line 257 "sql.y"
                                           { (yyval.str) = strdup("mai mic decat"); }
-#line 1999 "y.tab.c"
+#line 1822 "sql.tab.c"
     break;
 
   case 78: /* comparator: GE  */
 #line 258 "sql.y"
                                           { (yyval.str) = strdup("mai mare sau egal cu"); }
-#line 2005 "y.tab.c"
+#line 1828 "sql.tab.c"
     break;
 
   case 79: /* comparator: LE  */
 #line 259 "sql.y"
                                           { (yyval.str) = strdup("mai mic sau egal cu"); }
-#line 2011 "y.tab.c"
+#line 1834 "sql.tab.c"
     break;
 
   case 80: /* comparator: NE  */
 #line 260 "sql.y"
                                           { (yyval.str) = strdup("diferit de"); }
-#line 2017 "y.tab.c"
+#line 1840 "sql.tab.c"
     break;
 
   case 81: /* assignment_list: assignment  */
 #line 264 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2023 "y.tab.c"
+#line 1846 "sql.tab.c"
     break;
 
   case 82: /* assignment_list: assignment_list ',' assignment  */
 #line 265 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-2].str), ", ", (yyvsp[0].str)); }
-#line 2029 "y.tab.c"
+#line 1852 "sql.tab.c"
     break;
 
   case 83: /* assignment: identifier EQ expression  */
 #line 269 "sql.y"
                                           { (yyval.str) = textf("%s la %s", (yyvsp[-2].str), (yyvsp[0].str)); }
-#line 2035 "y.tab.c"
+#line 1858 "sql.tab.c"
     break;
 
   case 84: /* value_tuple_list: value_tuple  */
 #line 273 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2041 "y.tab.c"
+#line 1864 "sql.tab.c"
     break;
 
   case 85: /* value_tuple_list: value_tuple_list ',' value_tuple  */
 #line 274 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-2].str), "; ", (yyvsp[0].str)); }
-#line 2047 "y.tab.c"
+#line 1870 "sql.tab.c"
     break;
 
   case 86: /* value_tuple: '(' literal_list ')'  */
 #line 278 "sql.y"
                                           { (yyval.str) = textf("(%s)", (yyvsp[-1].str)); }
-#line 2053 "y.tab.c"
+#line 1876 "sql.tab.c"
     break;
 
   case 87: /* literal_list: literal  */
 #line 282 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2059 "y.tab.c"
+#line 1882 "sql.tab.c"
     break;
 
   case 88: /* literal_list: literal_list ',' literal  */
 #line 283 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-2].str), ", ", (yyvsp[0].str)); }
-#line 2065 "y.tab.c"
+#line 1888 "sql.tab.c"
     break;
 
   case 89: /* literal: STRING  */
 #line 287 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2071 "y.tab.c"
+#line 1894 "sql.tab.c"
     break;
 
   case 90: /* literal: NUMBER  */
 #line 288 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2077 "y.tab.c"
+#line 1900 "sql.tab.c"
     break;
 
   case 91: /* literal: NULL_T  */
 #line 289 "sql.y"
                                           { (yyval.str) = strdup("NULL"); }
-#line 2083 "y.tab.c"
+#line 1906 "sql.tab.c"
     break;
 
   case 92: /* expression_list: expression  */
 #line 293 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2089 "y.tab.c"
+#line 1912 "sql.tab.c"
     break;
 
   case 93: /* expression_list: expression_list ',' expression  */
 #line 294 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-2].str), ", ", (yyvsp[0].str)); }
-#line 2095 "y.tab.c"
+#line 1918 "sql.tab.c"
     break;
 
   case 94: /* opt_expression_list: %empty  */
 #line 298 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 2101 "y.tab.c"
+#line 1924 "sql.tab.c"
     break;
 
   case 95: /* opt_expression_list: expression_list  */
 #line 299 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2107 "y.tab.c"
+#line 1930 "sql.tab.c"
     break;
 
   case 96: /* expression: identifier  */
 #line 303 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2113 "y.tab.c"
+#line 1936 "sql.tab.c"
     break;
 
   case 97: /* expression: literal  */
 #line 304 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2119 "y.tab.c"
+#line 1942 "sql.tab.c"
     break;
 
   case 98: /* expression: function_call  */
 #line 305 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2125 "y.tab.c"
+#line 1948 "sql.tab.c"
     break;
 
   case 99: /* expression: expression '+' expression  */
 #line 306 "sql.y"
                                           { (yyval.str) = textf("%s plus %s", (yyvsp[-2].str), (yyvsp[0].str)); }
-#line 2131 "y.tab.c"
+#line 1954 "sql.tab.c"
     break;
 
   case 100: /* expression: expression '-' expression  */
 #line 307 "sql.y"
                                           { (yyval.str) = textf("%s minus %s", (yyvsp[-2].str), (yyvsp[0].str)); }
-#line 2137 "y.tab.c"
+#line 1960 "sql.tab.c"
     break;
 
   case 101: /* expression: expression '*' expression  */
 #line 308 "sql.y"
                                           { (yyval.str) = textf("%s inmultit cu %s", (yyvsp[-2].str), (yyvsp[0].str)); }
-#line 2143 "y.tab.c"
+#line 1966 "sql.tab.c"
     break;
 
   case 102: /* expression: expression '/' expression  */
 #line 309 "sql.y"
                                           { (yyval.str) = textf("%s impartit la %s", (yyvsp[-2].str), (yyvsp[0].str)); }
-#line 2149 "y.tab.c"
+#line 1972 "sql.tab.c"
     break;
 
   case 103: /* expression: '(' expression ')'  */
 #line 310 "sql.y"
                                           { (yyval.str) = textf("(%s)", (yyvsp[-1].str)); }
-#line 2155 "y.tab.c"
+#line 1978 "sql.tab.c"
     break;
 
   case 104: /* function_call: aggregate_function '(' expression ')'  */
@@ -2159,7 +1982,7 @@ yyreduce:
                                             {
           (yyval.str) = textf("%s pentru %s", (yyvsp[-3].str), (yyvsp[-1].str));
       }
-#line 2163 "y.tab.c"
+#line 1986 "sql.tab.c"
     break;
 
   case 105: /* function_call: COUNT '(' expression ')'  */
@@ -2167,7 +1990,7 @@ yyreduce:
                                {
           (yyval.str) = textf("numarul de valori pentru %s", (yyvsp[-1].str));
       }
-#line 2171 "y.tab.c"
+#line 1994 "sql.tab.c"
     break;
 
   case 106: /* function_call: COUNT '(' '*' ')'  */
@@ -2175,7 +1998,7 @@ yyreduce:
                         {
           (yyval.str) = strdup("numarul total de inregistrari");
       }
-#line 2179 "y.tab.c"
+#line 2002 "sql.tab.c"
     break;
 
   case 107: /* function_call: WORD '(' opt_expression_list ')'  */
@@ -2183,97 +2006,97 @@ yyreduce:
                                        {
           (yyval.str) = textf("functia %s aplicata pe %s", (yyvsp[-3].str), strlen((yyvsp[-1].str)) ? (yyvsp[-1].str) : "fara argumente");
       }
-#line 2187 "y.tab.c"
+#line 2010 "sql.tab.c"
     break;
 
   case 108: /* aggregate_function: SUM  */
 #line 329 "sql.y"
                                           { (yyval.str) = strdup("suma"); }
-#line 2193 "y.tab.c"
+#line 2016 "sql.tab.c"
     break;
 
   case 109: /* aggregate_function: AVG  */
 #line 330 "sql.y"
                                           { (yyval.str) = strdup("media"); }
-#line 2199 "y.tab.c"
+#line 2022 "sql.tab.c"
     break;
 
   case 110: /* aggregate_function: MIN  */
 #line 331 "sql.y"
                                           { (yyval.str) = strdup("valoarea minima"); }
-#line 2205 "y.tab.c"
+#line 2028 "sql.tab.c"
     break;
 
   case 111: /* aggregate_function: MAX  */
 #line 332 "sql.y"
                                           { (yyval.str) = strdup("valoarea maxima"); }
-#line 2211 "y.tab.c"
+#line 2034 "sql.tab.c"
     break;
 
   case 112: /* column_list: identifier  */
 #line 336 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2217 "y.tab.c"
+#line 2040 "sql.tab.c"
     break;
 
   case 113: /* column_list: column_list ',' identifier  */
 #line 337 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-2].str), ", ", (yyvsp[0].str)); }
-#line 2223 "y.tab.c"
+#line 2046 "sql.tab.c"
     break;
 
   case 114: /* column_def_list: column_def  */
 #line 341 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2229 "y.tab.c"
+#line 2052 "sql.tab.c"
     break;
 
   case 115: /* column_def_list: column_def_list ',' column_def  */
 #line 342 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-2].str), "; ", (yyvsp[0].str)); }
-#line 2235 "y.tab.c"
+#line 2058 "sql.tab.c"
     break;
 
   case 116: /* column_def: identifier data_type column_attrs  */
 #line 346 "sql.y"
                                           { (yyval.str) = textf("%s de tip %s%s%s", (yyvsp[-2].str), (yyvsp[-1].str), strlen((yyvsp[0].str)) ? " " : "", (yyvsp[0].str)); }
-#line 2241 "y.tab.c"
+#line 2064 "sql.tab.c"
     break;
 
   case 117: /* data_type: WORD  */
 #line 350 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2247 "y.tab.c"
+#line 2070 "sql.tab.c"
     break;
 
   case 118: /* data_type: WORD '(' NUMBER ')'  */
 #line 351 "sql.y"
                                           { (yyval.str) = textf("%s(%s)", (yyvsp[-3].str), (yyvsp[-1].str)); }
-#line 2253 "y.tab.c"
+#line 2076 "sql.tab.c"
     break;
 
   case 119: /* data_type: WORD '(' NUMBER ',' NUMBER ')'  */
 #line 352 "sql.y"
                                           { (yyval.str) = textf("%s(%s,%s)", (yyvsp[-5].str), (yyvsp[-3].str), (yyvsp[-1].str)); }
-#line 2259 "y.tab.c"
+#line 2082 "sql.tab.c"
     break;
 
   case 120: /* column_attrs: %empty  */
 #line 356 "sql.y"
                                           { (yyval.str) = strdup(""); }
-#line 2265 "y.tab.c"
+#line 2088 "sql.tab.c"
     break;
 
   case 121: /* column_attrs: column_attrs column_attr  */
 #line 357 "sql.y"
                                           { (yyval.str) = append_text((yyvsp[-1].str), " ", (yyvsp[0].str)); }
-#line 2271 "y.tab.c"
+#line 2094 "sql.tab.c"
     break;
 
   case 122: /* column_attr: PRIMARY KEY  */
 #line 361 "sql.y"
                                           { (yyval.str) = strdup("cheie primara"); }
-#line 2277 "y.tab.c"
+#line 2100 "sql.tab.c"
     break;
 
   case 123: /* column_attr: FOREIGN KEY REFERENCES identifier '(' identifier ')'  */
@@ -2281,7 +2104,7 @@ yyreduce:
                                                            {
           (yyval.str) = textf("cheie straina catre %s(%s)", (yyvsp[-3].str), (yyvsp[-1].str));
       }
-#line 2285 "y.tab.c"
+#line 2108 "sql.tab.c"
     break;
 
   case 124: /* column_attr: REFERENCES identifier '(' identifier ')'  */
@@ -2289,47 +2112,47 @@ yyreduce:
                                                {
           (yyval.str) = textf("referinta catre %s(%s)", (yyvsp[-3].str), (yyvsp[-1].str));
       }
-#line 2293 "y.tab.c"
+#line 2116 "sql.tab.c"
     break;
 
   case 125: /* column_attr: NOT NULL_T  */
 #line 368 "sql.y"
                                           { (yyval.str) = strdup("obligatorie"); }
-#line 2299 "y.tab.c"
+#line 2122 "sql.tab.c"
     break;
 
   case 126: /* column_attr: UNIQUE  */
 #line 369 "sql.y"
                                           { (yyval.str) = strdup("unica"); }
-#line 2305 "y.tab.c"
+#line 2128 "sql.tab.c"
     break;
 
   case 127: /* column_attr: DEFAULT literal  */
 #line 370 "sql.y"
                                           { (yyval.str) = textf("cu valoare implicita %s", (yyvsp[0].str)); }
-#line 2311 "y.tab.c"
+#line 2134 "sql.tab.c"
     break;
 
   case 128: /* column_attr: CHECK '(' condition ')'  */
 #line 371 "sql.y"
                                           { (yyval.str) = textf("cu verificarea %s", (yyvsp[-1].str)); }
-#line 2317 "y.tab.c"
+#line 2140 "sql.tab.c"
     break;
 
   case 129: /* identifier: WORD  */
 #line 375 "sql.y"
                                           { (yyval.str) = strdup((yyvsp[0].str)); }
-#line 2323 "y.tab.c"
+#line 2146 "sql.tab.c"
     break;
 
   case 130: /* identifier: WORD '.' WORD  */
 #line 376 "sql.y"
                                           { (yyval.str) = textf("%s.%s", (yyvsp[-2].str), (yyvsp[0].str)); }
-#line 2329 "y.tab.c"
+#line 2152 "sql.tab.c"
     break;
 
 
-#line 2333 "y.tab.c"
+#line 2156 "sql.tab.c"
 
       default: break;
     }
